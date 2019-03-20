@@ -13,7 +13,6 @@ noremap <Leader>P "+p
 set tabstop=4
 set shiftwidth=4
 set clipboard=unnamedplus
-map <C-n> :NERDTreeToggle<CR>
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']
@@ -23,11 +22,10 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'tpope/vim-fugitive'
-Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-
+Plugin 'ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
@@ -36,7 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
-Plugin 'scrooloose/nerdtree'
+Plugin 'octol/vim-cpp-enhanced-highlight' 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
