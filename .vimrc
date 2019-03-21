@@ -1,6 +1,17 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 set number
+set scrolloff=10
+set tabstop=4
+set shiftwidth=4
+set ignorecase
+set smartcase
+set clipboard=unnamed
+set splitbelow
+set splitright
+set number relativenumber
+set nu rnu
+set cursorline
 syntax on
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -10,9 +21,7 @@ noremap <Leader>y "*y
 noremap <Leader>p "*p
 noremap <Leader>Y "+y
 noremap <Leader>P "+p
-set tabstop=4
-set shiftwidth=4
-set clipboard=unnamedplus
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml,*.php,*.jsx"
 
 let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 let g:syntastic_javascript_checkers = ['eslint']
@@ -27,6 +36,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'ctrlp.vim'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'pangloss/vim-javascript'
+Plugin 'chemzqm/vim-jsx-improve'
 Plugin 'mxw/vim-jsx'
 Plugin 'mattn/emmet-vim'
 Plugin 'easymotion/vim-easymotion'
@@ -35,6 +45,12 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'SirVer/ultisnips'
 Plugin 'octol/vim-cpp-enhanced-highlight' 
+Plugin 'raimondi/delimitmate'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'alvan/vim-closetag'
+
+colorscheme jellybeans
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
